@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - توسعه سلامت هوشمند سیمرغ</title>
+    <link rel="icon" href="assets/img/primary-favicon.png" type="image/jpeg">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" >
+    <link rel="stylesheet" href="assets/custom/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8ppcStkpop4pABmrAPgmT8wQ7x5Qo0TvmWTNA0NFz+tA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Shared styles from index.html (or external style.css) */
+        body { font-family: 'IRANSansX', sans-serif; color: #333; direction: rtl; }
+        .navbar-brand img { max-height: 40px; }
+        .footer { background-color: #f8f9fa; color: #333; padding: 40px 0; border-top: 1px solid #eee; }
+        .social-icons a { color: #1a73e8; font-size: 24px; margin: 0 10px; transition: color 0.2s; }
+        .social-icons a:hover { color: #0d47a1; }
+        .section-title { text-align: center; margin-bottom: 40px; font-weight: bold; color: #1a73e8; }
+        .contact-info .icon-text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .contact-info .icon-text i {
+            font-size: 1.5rem;
+            color: #1a73e8;
+            margin-left: 10px; /* For RTL */
+        }
+        .map-container {
+            height: 450px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/primary-logo.png" alt="لوگوی سیمرغ">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">اخبار و اطلاعیه\u200cها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">معرفی محصولات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contact.html">تماس با ما</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="about.html" class="btn btn-primary">مطالعه بیشتر درباره شرکت</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="section-title">تماس با ما</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="row mb-5">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="p-4 bg-light rounded shadow-sm h-100">
+                            <h4 class="mb-4 text-primary">اطلاعات تماس</h4>
+                            <div class="contact-info">
+                                <p class="icon-text">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>ایمیل: <a href="mailto:mail@mail.com" class="text-decoration-none text-dark">mail@mail.com</a></span>
+                                </p>
+                                <p class="icon-text">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>تلفن ثابت: (فعلاً خالی)</span>
+                                </p>
+                                <p class="icon-text">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>آدرس: کرمان، بلوار جمهوری اسلامی، پارک علم و فناوری سلامت کرمان</span>
+                                </p>
+                            </div>
+                            <h5 class="mt-4 text-primary">ما را در شبکه\u200cهای اجتماعی دنبال کنید:</h5>
+                            <div class="social-icons">
+                                <a href="placeholder" target="_blank" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+                                <a href="placeholder" target="_blank" class="text-decoration-none"><i class="fab fa-telegram-plane"></i></a>
+                                <a href="placeholder" target="_blank" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="map-container">
+                            <iframe src="https://nshn.ir/x0r_f94pL5_b2Q" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-light rounded shadow-sm">
+                    <h4 class="mb-4 text-primary text-center">ارسال پیام به ما</h4>
+                    <p class="text-center text-muted">برای ارسال پیام مستقیم از طریق وب\u200cسایت، این بخش در آینده فعال خواهد شد.</p>
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>درباره سیمرغ</h5>
+                    <p>نوآوری هوشمند برای سلامت آینده. ما در توسعه سلامت هوشمند سیمرغ متعهد به ادغام تکنولوژی در سلامت و ارتقای کیفیت خدمات درمانی هستیم. برای اطلاعات بیشتر به صفحه درباره ما مراجعه کنید.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>لینک\u200cهای سریع</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-dark">صفحه اصلی</a></li>
+                        <li><a href="news.html" class="text-decoration-none text-dark">اخبار و اطلاعیه\u200cها</a></li>
+                        <li><a href="products.html" class="text-decoration-none text-dark">معرفی محصولات</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-dark">درباره ما</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-dark">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>اطلاعات تماس</h5>
+                    <p>
+                        <i class="fas fa-envelope"></i> ایمیل: <a href="mailto:mail@mail.com" class="text-decoration-none text-dark">mail@mail.com</a><br>
+                        <i class="fas fa-map-marker-alt"></i> آدرس: کرمان، بلوار جمهوری اسلامی، پارک علم و فناوری سلامت کرمان
+                    </p>
+                    <div class="social-icons mt-3">
+                        <a href="placeholder" target="_blank" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+                        <a href="placeholder" target="_blank" class="text-decoration-none"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="placeholder" target="_blank" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 border-top pt-3">
+                <p>&copy; 2025 توسعه سلامت هوشمند سیمرغ. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"  ></script>
+</body>
+</html>
