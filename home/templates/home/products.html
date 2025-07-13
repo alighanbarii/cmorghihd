@@ -1,12 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>معرفی محصولات - توسعه سلامت هوشمند سیمرغ</title>
-    <link rel="icon" href="assets/img/primary-favicon.png" type="image/jpeg">
-    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" >
-    <link rel="stylesheet" href="assets/custom/css/style.css">
+    <link rel="icon" href="{% static 'img/primary-favicon.png}" type="image/jpeg">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/custom/css/style.css}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8ppcStkpop4pABmrAPgmT8wQ7x5Qo0TvmWTNA0NFz+tA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Shared styles from index.html (or external style.css) */
@@ -34,23 +36,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">صفحه اصلی</a>
+                            <a class="nav-link" href="index">صفحه اصلی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html">اخبار و اطلاعیه\u200cها</a>
+                            <a class="nav-link" href="news">اخبار و اطلاعیه\u200cها</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="products.html">معرفی محصولات</a>
+                            <a class="nav-link active" aria-current="page" href="products">معرفی محصولات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">درباره ما</a>
+                            <a class="nav-link" href="about">درباره ما</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">تماس با ما</a>
+                            <a class="nav-link" href="contact">تماس با ما</a>
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <a href="about.html" class="btn btn-primary">مطالعه بیشتر درباره شرکت</a>
+                        <a href="about" class="btn btn-primary">مطالعه بیشتر درباره شرکت</a>
                     </div>
                 </div>
             </div>
@@ -177,6 +179,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js}"></script>
 </body>
 </html>
