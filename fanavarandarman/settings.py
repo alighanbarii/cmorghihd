@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-STATIC_ROOT=BASE_DIR / 'static'
+STATIC_ROOT=BASE_DIR / 'staticfiles'
 CSRF_COOKIE_SECURE=True
 SESSION_COOKIE_SECURE=True
 
@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
