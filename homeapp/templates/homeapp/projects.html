@@ -1,0 +1,24 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+<table class="table table-responsive">
+  <tr>
+    <th>عنوان</th>
+    <th>توضیحات</th>
+    <th>جزئیات</th>
+    <th>همکاری</th>
+  </tr>
+  {% for project in projects %}
+  <tr>
+    <td>{{project.title}}</td>
+    <td>{{project.description}}</td>
+    <td>
+      <a href="{% url 'project-detail' project.id %}" class="btn btn-secondary">  جزئیات بیشتر</a>
+    </td>
+    <td>
+      <a href="{%url 'cooperate-on' project.id %}" class="btn btn-primary"
+        >همکاری
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

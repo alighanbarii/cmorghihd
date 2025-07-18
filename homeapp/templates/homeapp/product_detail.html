@@ -1,0 +1,217 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<main>
+  <section class="product-hero">
+    <div class="container">
+      <p class="lead">بروشور محصول:</p>
+      <a
+        href="{% static 'brochures/iaihis-brochure.pdf' %}"
+        class="btn btn-light btn-lg mb-4"
+        download
+        ><i class="fas fa-download"></i> دانلود بروشور IAIHIS</a
+      >
+      <h1>IAIHIS - سیستم جامع هوش مصنوعی بیمارستانی</h1>
+      <p class="lead">
+        شعار محصول: هوشمندی بی وقفه برای تشخیص دقیق و درمان مؤثر.
+      </p>
+    </div>
+  </section>
+
+  <div class="container my-5">
+    <section class="mb-5">
+      <h3 class="section-title">معرفی ویدئویی IAIHIS</h3>
+      <div class="product-detail-video-container">
+        <iframe
+          src="https://www.aparat.com/video/video/embed/videohash/J6o24/vt/frame"
+          title="معرفی IAIHIS"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="section-title">IAIHIS در یک نگاه</h3>
+      <p class="fs-5 text-center">
+        IAIHIS پلتفرمی پیشرو است که هوش مصنوعی را به قلب سیستم های اطلاعات
+        بیمارستانی شما می آورد. با قابلیت ادغام یکپارچه با PACS و HIS، این سیستم
+        به پزشکان امکان می دهد تا از جدیدترین مدل های هوش مصنوعی برای تشخیص دقیق
+        تر، برنامه ریزی درمانی بهتر و افزایش بهره وری استفاده کنند.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="section-title">گالری تصاویر</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col gallery-item">
+          <img
+            src="https://via.placeholder.com/600x400/0d6efd/FFFFFF?text=IAIHIS+Screenshot+1"
+            class="img-fluid"
+            alt="تصویر ۱ IAIHIS"
+          />
+        </div>
+        <div class="col gallery-item">
+          <img
+            src="https://via.placeholder.com/600x400/6610f2/FFFFFF?text=IAIHIS+Screenshot+2"
+            class="img-fluid"
+            alt="تصویر ۲ IAIHIS"
+          />
+        </div>
+        <div class="col gallery-item">
+          <img
+            src="https://via.placeholder.com/600x400/fd7e14/FFFFFF?text=IAIHIS+Screenshot+3"
+            class="img-fluid"
+            alt="تصویر ۳ IAIHIS"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="section-title">توضیحات کامل</h3>
+      <p>
+        سیستم IAIHIS (Integrated AI in Hospital Information Systems) یک راه حل
+        جامع و یکپارچه است که برای رفع نیازهای روزافزون مراکز درمانی در عصر
+        دیجیتال طراحی شده است. این پلتفرم با ادغام هوش مصنوعی در ساختار موجود
+        بیمارستان ها، از طریق پروتکل های استاندارد DICOM برای ارتباط با سرور
+        PACS و HL7 برای ارتباط با HIS، امکان بهره\u200cبرداری حداکثری از داده
+        های پزشکی را فراهم می آورد. داده های تصویری بیماران به صورت بی نام شده و
+        از طریق پروتکل\u200cهای بهینه gRPC به میکروسرویس های هوش مصنوعی در فضای
+        ابری ارسال می\u200cشوند. مدیریت و توزیع درخواست های پردازش توسط
+        Kubernetes صورت می\u200cگیرد که مدل های هوش مصنوعی را در کانتینرهای
+        Docker اجرا می\u200cکند. نظارت بر عملکرد مدل ها، مدیریت نسخه ها و پایش
+        Data Drift با استفاده از MLflow, Evidently AI و Prometheus انجام می شود
+        که تضمین کننده کیفیت و پایداری خدمات است.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="section-title">ویژگی های کلیدی</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="feature-box">
+            <i class="fas fa-laptop-medical"></i>
+            <h5>یکپارچگی کامل با HIS و PACS</h5>
+            <p>
+              ارتباط بی درنگ با سیستم های موجود بیمارستانی از طریق پروتکل های
+              DICOM و HL7.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <i class="fas fa-cloud"></i>
+            <h5>پردازش ابری و محلی انعطاف پذیر</h5>
+            <p>
+              امکان انتخاب بین استقرار مدل های هوش مصنوعی در فضای ابری یا به
+              صورت On-premises.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <h5>امنیت و حریم خصوصی پیشرفته</h5>
+            <p>
+              ناشناس سازی داده ها، رمزنگاری اطلاعات و مدیریت دسترسی پیشرفته.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <i class="fas fa-cogs"></i>
+            <h5>مدیریت پیشرفته مدل های هوش مصنوعی</h5>
+            <p>
+              استفاده از Kubernetes، Docker، MLflow، Evidently AI و Prometheus
+              برای کارایی و پایداری بالا.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <i class="fas fa-user-md"></i>
+            <h5>پلتفرم جامع برای پزشکان</h5>
+            <p>
+              دسترسی سریع به ابزارهای AI تایید شده، DICOM Viewer و کاهش زمان
+              گزارش نویسی.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <i class="fas fa-chart-line"></i>
+            <h5>بهره وری و بازدهی بیمارستان</h5>
+            <p>افزایش کارایی کادر درمانی و بهینه سازی فرایندهای بالینی.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="section-title">مزایا</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fas fa-check-circle text-success me-2"></i> افزایش دقت تشخیص
+          و کاهش خطاهای پزشکی
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-check-circle text-success me-2"></i> بهینه سازی زمان
+          پزشکان و کادر درمانی
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-check-circle text-success me-2"></i> دسترسی به
+          جدیدترین ابزارهای هوش مصنوعی با پشتوانه علمی
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-check-circle text-success me-2"></i> بهبود امنیت داده
+          ها و حریم خصوصی بیماران
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-check-circle text-success me-2"></i> ایجاد بستر برای
+          همکاری بین پزشکان و محققان AI
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h3 class="section-title">نیازمندی ها</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fas fa-info-circle text-info me-2"></i> سرورهای HIS و PACS
+          موجود در بیمارستان
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-info-circle text-info me-2"></i> زیرساخت شبکه داخلی
+          پایدار
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-info-circle text-info me-2"></i> دسترسی به اینترنت
+          (برای مدل های ابری)
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-info-circle text-info me-2"></i> توان محاسباتی مناسب
+          (در صورت استقرار On-premises)
+        </li>
+      </ul>
+    </section>
+
+    <section class="text-center mb-5 p-4 bg-light rounded shadow-sm">
+      <h3 class="section-title mb-4">
+        برای مشاوره و خرید IAIHIS با ما تماس بگیرید
+      </h3>
+      <p class="lead">
+        متخصصان ما آماده اند تا به سوالات شما پاسخ دهند و بهترین راه حل را برای
+        نیازهای بیمارستان شما ارائه دهند.
+      </p>
+      <a href="{% url 'contact-us'%}" class="btn btn-primary btn-lg"
+        ><i class="fas fa-phone-alt"></i> تماس با ما</a
+      >
+    </section>
+
+    <div class="mt-5 text-center">
+      <a href="{%url 'products'%}" class="btn btn-outline-secondary"
+        ><i class="fas fa-arrow-right"></i> بازگشت به لیست محصولات</a
+      >
+    </div>
+  </div>
+</main>
+{% endblock content %}

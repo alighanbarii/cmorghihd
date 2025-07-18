@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <main class="container my-5">
+        <h2 class="section-title">معرفی محصولات </h2>
+
+        <ul class="nav nav-tabs justify-content-center mb-4" id="productTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="software-tab" data-bs-toggle="tab" data-bs-target="#software" type="button" role="tab" aria-controls="software" aria-selected="true">نرم افزارها</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ai-models-tab" data-bs-toggle="tab" data-bs-target="#ai-models" type="button" role="tab" aria-controls="ai-models" aria-selected="false">مدل های هوش مصنوعی</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="medical-equipment-tab" data-bs-toggle="tab" data-bs-target="#medical-equipment" type="button" role="tab" aria-controls="medical-equipment" aria-selected="false">تجهیزات پزشکی هوشمند</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="productTabsContent">
+            <div class="tab-pane fade show active" id="software" role="tabpanel" aria-labelledby="software-tab">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/400x200/0d6efd/FFFFFF?text=Software+1" class="card-img-top" alt="تصویر نرم\u200cافزار IAIHIS">
+                            <div class="card-body">
+                                <h5 class="card-title">IAIHIS - سیستم جامع هوش مصنوعی بیمارستانی</h5>
+                                <p class="card-text">پلتفرمی یکپارچه برای ادغام هوش مصنوعی در سیستم های اطلاعات بیمارستانی و PACS.</p>
+                                <a href="{% url 'product-detail' product_id %}" class="btn btn-sm btn-outline-primary">مشاهده جزئیات</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/400x200/6610f2/FFFFFF?text=Software+2" class="card-img-top" alt="تصویر نرم افزار">
+                            <div class="card-body">
+                                <h5 class="card-title">نرمافزار مدیریت نوبت دهی هوشمند</h5>
+                                <p class="card-text">سیستم مدیریت نوبت دهی با قابلیت بهینه سازی زمان و منابع برای کلینیک ها.</p>
+                                <a href="{% url 'product-detail' product_id %}" class="btn btn-sm btn-outline-primary">مشاهده جزئیات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="ai-models" role="tabpanel" aria-labelledby="ai-models-tab">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/400x200/fd7e14/FFFFFF?text=AI+Model+1" class="card-img-top" alt="تصویر مدل AI">
+                            <div class="card-body">
+                                <h5 class="card-title">مدل تشخیص زودهنگام سرطان ریه</h5>
+                                <p class="card-text">مدل هوش مصنوعی با دقت بالا برای تشخیص ناهنجاری های ریوی در تصاویر سی تی اسکن.</p>
+                                <a href="{% url 'product-detail' product_id %}" class="btn btn-sm btn-outline-primary">مشاهده جزئیات</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/400x200/20c997/FFFFFF?text=AI+Model+2" class="card-img-top" alt="تصویر مدل AI">
+                            <div class="card-body">
+                                <h5 class="card-title">مدل سگمنتیشن خودکار ارگان</h5>
+                                <p class="card-text">جداسازی و شناسایی خودکار ارگان حیاتی در تصاویر پزشکی سه بعدی.</p>
+                                <a href="{% url 'product-detail' product_id %}" class="btn btn-sm btn-outline-primary">مشاهده جزئیات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="medical-equipment" role="tabpanel" aria-labelledby="medical-equipment-tab">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/400x200/dc3545/FFFFFF?text=Medical+Device+1" class="card-img-top" alt="تصویر تجهیزات پزشکی">
+                            <div class="card-body">
+                                <h5 class="card-title">دستگاه پایش علائم حیاتی هوشمند</h5>
+                                <p class="card-text">تجهیزات پیشرفته برای پایش مداوم علائم حیاتی با قابلیت تحلیل هوشمند داده.</p>
+                                <a href="{% url 'product-detail' product_id %}" class="btn btn-sm btn-outline-primary">مشاهده جزئیات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

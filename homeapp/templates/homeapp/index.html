@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+{% include 'hero.html' %} 
+{% for project in projects %}
+<hr>
+<ul>
+  <li>{{project.title}}</li>
+  <li>{{project.description}}</li>
+  <li>
+    {% for tag in project.tags.all %}
+    <span class="span ">{{tag.name}}</span>
+    {% endfor %}
+  </li>
+  <li>{{project.created_at}}</li>
+</ul>
+{% endfor %} 
+{% endblock content %}
