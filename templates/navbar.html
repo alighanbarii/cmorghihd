@@ -4,7 +4,7 @@
   <div class="container">
     <a class="navbar-brand" href="{% url 'index' %}">
       <img
-        src="{% static 'img/primary-logo.png' %}"
+        src="{% static 'images/primary-logo.png' %}"
         alt="لوگوی شرکت"
         style="min-height: 80px"
       />
@@ -31,7 +31,7 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="news">اخبار و اطلاعیه ها</a>
+          <a class="nav-link" href="{% url 'news' %}">اخبار و اطلاعیه ها</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'products' %}">معرفی محصولات </a>
@@ -45,7 +45,7 @@
       </ul>
       <div class="d-flex">
         <a href="{%url 'cooperate'%}" class="btn btn-primary"
-          >همکاری در پروژه</a
+          >همکاری در پروژه ها</a
         >
       </div>
     </div>

@@ -1,17 +1,195 @@
-{% extends 'main.html' %}
-{% block content %}
-{% include 'hero.html' %} 
-{% for project in projects %}
-<hr>
-<ul>
-  <li>{{project.title}}</li>
-  <li>{{project.description}}</li>
-  <li>
-    {% for tag in project.tags.all %}
-    <span class="span ">{{tag.name}}</span>
+{% extends 'main.html' %} 
+{% load static %}
+{% block content %} {% include 'hero.html' %}
+<div class="container marketing mt-5 text-center">
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4 d-flex flex-column justify-content-start">
+      <div>
+        <image
+          aria-label="ai models"
+          class="bd-placeholder-img rounded-circle"
+          
+          preserveAspectRatio="xMidYMid slice"
+          style="width: 140px;height: 140px;"
+          src="{% static 'images/ai-logo.jpg'%}"
+     >
+
+      </div>
+      <div class="pt-4">
+        <h2 class="fw-normal">مدل های هوش مصنوعی</h2>
+      </div>
+      <div>
+        <p>
+          آموزش ، پیاده سازی و تست بالینی ابزار های هوش مصنوعی بر اساس استاندارد
+          های از پیش تعریف شده برای استفاده در محیط بالینی
+        </p>
+      </div>
+      <div class="mt-auto">
+        <a class="btn btn-secondary align-self-end" href="#">مشاهده مدل ها</a>
+      </div>
+    </div>
+    <!-- /.col-lg-4 -->
+    <div class="col-lg-4 d-flex flex-column justify-content-start">
+      <div>
+        <image
+          aria-label="Placeholder"
+          class="bd-placeholder-img rounded-circle"
+          style="width: 140px;height: 140px;"
+          src="{% static 'images/cloud.jpg'%}"
+        >
+          
+      </div>
+      <div class="pt-4"><h2 class="fw-normal">نرم افزار های جامع بیمارستانی</h2></div>
+      <div>
+        <p>
+          نرم‌افزارهای جامع بیمارستانی فناوران درمان فردا ، ما با بهره‌گیری از جدیدترین فناوری‌ ها و استاندارد های صنعت، امنیت و سرعت را برای شما به ارمغان می آورند.
+        </p>
+      </div class="mt-auto">
+      <div><a class="btn btn-secondary" href="#">نرم افزار ها</a></div>
+    </div>
+    <!-- /.col-lg-4 -->
+    <div class="col-lg-4 d-flex justify-content-start flex-column ">
+      <div>
+        <image
+          aria-label="Placeholder"
+          class="bd-placeholder-img rounded-circle"
+          height="140"
+          preserveAspectRatio="xMidYMid slice"
+          style="width: 140px;height: 140px;"
+          src="{% static 'images/equipment-logo.jpg'%}"
+        >
+       
+      </div>
+      <div class="pt-4"><h2 class="fw-normal">تجهیزات پزشکی هوشمند</h2></div>
+      <div>
+        <p>
+          با رشد و پیشرفت تکنولوژی ، روزانه ابزار های هوشمندتر ، دقیق تری ساخته
+          شده که کیفیت درمان را افزایش میدهند
+        </p>
+      </div>
+      <div class="mt-auto"><a class="btn btn-secondary" href="#">تجهیزات هوشمند</a></div>
+    </div>
+    <!-- /.col-lg-4 -->
+  </div>
+  <!-- /.row -->
+
+
+<main class="container my-5">
+  <h2 class="section-title">پروژه ها</h2>
+  <hr class="border-primary mb-5">
+
+
+  <div class="row justify-content-around row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for project in projects %}
+    <div class="col">
+      <div class="card" style="width: 350px;">
+        <img
+          src="{% static 'images/'%}{{project.project_image}}"
+          class="card-img-top"
+          style="width: 100%;height: auto;"
+          alt="{{project.title}} image"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{project.title}}</h5>
+          <p class="card-text">{{project.description_summary}}</p>
+          <p class="card-text text-muted small">باز شده در : {{project.started_at}}</p>
+          <p class="card-text text-muted small">اتمام فرصت همکاری : {{project.closes_at}}</p>
+          <div>
+            <a
+              href="{% url 'project-detail' project.id %}"
+              class="btn btn-sm btn-outline-primary"
+              >مشاهده جزئیات</a
+            >
+           
+            <a
+              href="{% url 'send-resume' project.id %}"
+              class="btn btn-sm btn-outline-success"
+              >ارسال رزومه
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     {% endfor %}
-  </li>
-  <li>{{project.created_at}}</li>
-</ul>
-{% endfor %} 
-{% endblock content %}
+  </div>
+</main>
+
+  <!-- START THE FEATURETTES -->
+  <hr class="featurette-divider" />
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">
+       نرم‌افزارهای جامع بیمارستانی
+      </h2><h4>
+
+        <span class="text-body-secondary"> مدیریت هوشمند، مراقبت بی‌نقص </span>
+      </h4>
+      <p class="lead">
+        نرم‌افزارهای جامع بیمارستانی ما با بهره‌گیری از فناوری‌های نوین، مدیریت اطلاعات بیماران، فرآیندهای درمانی و عملیات بیمارستان را ساده‌تر و کارآمدتر می‌کنند. این نرم‌افزارها با طراحی کاربرمحور، امکان یکپارچه‌سازی داده‌ها، افزایش دقت در تصمیم‌گیری‌های پزشکی و بهبود تجربه بیماران و کادر درمان را فراهم می‌آورند. از مدیریت پرونده‌های پزشکی تا زمان‌بندی دقیق نوبت‌دهی، ما راه‌حل‌هایی ارائه می‌دهیم که بیمارستان شما را به سطح جدیدی از هوشمندی و کارایی می‌رساند.
+      </p>
+    </div>
+    <div class="col-md-5">
+      <image
+        aria-label="Placeholder: 500x500"
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        style="width: 500px;height: 500px;"
+        src="{% static 'images/pacs.png'%}"
+      >
+       
+    </div>
+  </div>
+  <hr class="featurette-divider" />
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">
+ابزارهای هوش مصنوعی پزشکی
+</h2>
+      <h4>  <span class="text-body-secondary"> هوش مصنوعی، آینده پزشکی امروز </span></h4>
+      <p class="lead">
+        ابزارهای هوش مصنوعی پزشکی فناوران درمان فردا، با استفاده از الگوریتم‌های پیشرفته، به پزشکان در تشخیص دقیق‌تر، پیش‌بینی بهتر و ارائه درمان‌های شخصی‌سازی‌شده کمک می‌کنند. این ابزارها با تحلیل داده‌های پزشکی، از تصویربرداری تا سوابق بیمار، امکان شناسایی الگوهای پیچیده را فراهم می‌کنند تا تصمیم‌گیری‌های پزشکی سریع‌تر و قابل اعتمادتر شوند..
+      </p>
+      <div><a href="{% url 'projects'%}"> آینده پزشکی را با ما تجربه کنید</a></div>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <div style="width: 500px;height: 500px;overflow: hidden;">
+
+        <image
+        aria-label="Placeholder: 500x500"
+        class=" img-fluid mx-auto"
+        style="width: auto;height: 500px;"
+        src="{% static 'images/medical-ai.jpg' %}"
+        >
+      </div>
+      
+    </div>
+  </div>
+  <hr class="featurette-divider" />
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">
+        تجهیزات پزشکی هوشمند
+      </h2>
+      <h4>
+
+        <span class="text-body-secondary"> فناوری پیشرفته، سلامت پایدار </span>
+      </h4>
+      <p class="lead">
+        ما در فناوران درمان فردا، جدیدترین تجهیزات پزشکی هوشمند را از را از بهترین ها در اختیار شما میگذاریم. این تجهیزات با بهره‌گیری از فناوری‌های روز دنیا، دقت، کارایی و ایمنی را در فرآیندهای درمانی ارتقا می‌دهند. از ابزار های کنترلی برای بیمار تا ابزارهای جراحی هوشمند، محصولات ما به مراکز درمانی کمک می‌کنند تا خدمات باکیفیت‌تری به بیماران ارائه دهند.
+      </p>
+    </div>
+    <div class="col-md-5">
+      <image
+        aria-label="hospital equipment"
+        class=" featurette-image img-fluid mx-auto"
+  
+       
+        style="width: 500px;height: 500px;"
+        src="{% static 'images/ai.jpg'%}"
+      >
+    </div>
+  </div>
+  <hr class="featurette-divider" />
+  <!-- /END THE FEATURETTES -->
+</div>
+ {% endblock content %}

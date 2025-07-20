@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<main class="container my-5">
+  <h2 class="section-title">پروژه ها</h2>
+
+  <div class="row mb-4">
+    <div class="col-md-8 offset-md-2">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="جستجو در پروژه ها..."
+          aria-label=" جستجو در پروژه ها"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center mb-4 flex-wrap">
+    <button type="button" class="btn btn-outline-primary m-1 active">
+      همه
+    </button>
+    <button type="button" class="btn btn-outline-primary m-1">پروژه های باز</button>
+    <button type="button" class="btn btn-outline-primary m-1">به اتمام رسیده</button>
+
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for project in projects %}
+    <div class="col">
+      <div class="card" style="width: 350px;">
+        <img
+          src="{% static 'images/'%}{{project.project_image}}"
+          class="card-img-top"
+          style="width: 100%;height: auto;"
+          alt="{{project.title}} image"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{project.title}}</h5>
+          <p class="card-text">{{project.description_summary}}</p>
+          <p class="card-text text-muted small">باز شده در : {{project.started_at}}</p>
+          <p class="card-text text-muted small">اتمام فرصت همکاری : {{project.closes_at}}</p>
+          <div>
+            <a
+              href="{% url 'project-detail' project.id %}"
+              class="btn btn-sm btn-outline-primary"
+              >مشاهده جزئیات</a
+            >
+           
+            <a
+              href="{% url 'send-resume' project.id %}"
+              class="btn btn-sm btn-outline-success"
+              >ارسال رزومه
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock content%}
+

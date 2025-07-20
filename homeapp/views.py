@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Project
+from projects.models import Project
 # Create your views here.
 
 
@@ -17,14 +17,6 @@ def aboutPage(request):
 def contactusPage(request):
     context={}
     return render(request,'homeapp/contactus.html',context)
-
-def projectsPage(request):
-    projects=Project.objects.all()
-    context={"projects":projects,'product_id':1}
-    return render(request,'homeapp/projects.html',context)
-def projectDetailPage(request,project_id):
-    context={"project_id":project_id}
-    return render(request,'homeapp/project_detail.html',context)
 
 def productsPage(request):
     context={"product_id":"1"}
@@ -43,10 +35,3 @@ def cooperationPage(request):
 def cooperateonPage(request,project_id):
     return render(request,'homeapp/cooperateon.html',{"project_id":project_id})
 
-def newsPage(request):
-    context={}
-    return render(request,'homeapp/news.html',context)
-
-def newsDetailPage(request,news_id):
-    context={"news_id":news_id}
-    return render(request,'homeapp/news_detail.html',context)

@@ -1,0 +1,7 @@
+{% extends 'main.html' %} {%load static %} {% block content %}
+<form action="{% url 'update-news' news_id %}" method="post">
+  {% csrf_token %} {{form}}
+  <button type="submit">send</button>
+</form>
+
+{% endblock content %}

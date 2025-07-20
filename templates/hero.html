@@ -3,7 +3,11 @@
 <section class="hero-section justify-content-evenly">
   <video autoplay muted loop class="hero-video" id="hero_video">
     <source src="" type="video/mp4" />
-    <a href="{% static 'video/hands.mp4' %}" target="_blank" rel="noopener noreferrer"></a>
+    <a
+      href="{% static 'video/hands.mp4' %}"
+      target="_blank"
+      rel="noopener noreferrer"
+    ></a>
 
     مرورگر شما از تگ ویدئو پشتیبانی نمی کند.
   </video>
@@ -16,10 +20,10 @@
   <div class="hero-content">
     <h3 class="display-3 text-white mb-4">نوآوری هوشمند برای سلامت آینده</h3>
     <p class="lead text-white-50 mb-5">
-      همراه شما در مسیر سلامت هوشمند، پیشرو در ادغام تکنولوژی و خدمات درمانی.
+      همراه شما در مسیر سلامت هوشمند، پیشرو در ادغام تکنولوژی و خدمات درمانی
     </p>
-    <a href="about" class="btn btn-lg btn-primary shadow-lg"
-      >مطالعه بیشتر درباره شرکت</a
+    <a href="{% url 'about' %}" class="btn btn-lg btn-primary shadow-lg"
+      >همکاری در پروژه ها</a
     >
   </div>
 </section>

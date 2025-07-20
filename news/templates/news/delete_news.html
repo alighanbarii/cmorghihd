@@ -1,0 +1,8 @@
+{% extends 'main.html' %} {%load static %} {% block content %}
+<form action="{% url 'delete-news' news_id%}" method="post">
+  {% csrf_token %}
+  <label>ایا از حذف {{news.title}} اطمینان دارید؟ </label>
+  <a href="{% url 'news'%}">بازگشت به اخبار</a>
+  <button type="submit" class="btn btn-danger">DELETE</button>
+</form>
+{% endblock content %}

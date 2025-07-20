@@ -8,101 +8,16 @@
     <title>فناوران درمان فردا</title>
     <link
       rel="icon"
-      href="{% static 'img/primary-favicon.png' %}"
+      href="{% static 'images/primary-favicon.png' %}"
       type="image/jpeg"
     />
     <link rel="stylesheet" href="{% static 'compiled_assets/css/main.css' %}" />
     <!-- <link rel="stylesheet" href="{% static 'compiled_assets/css/font.css' %}" /> -->
-
-    <style>
-      /* استایل\u200cهای سفارشی برای فونت و رنگ\u200cها */
-      body {
-        font-family: "vazir", "IRANSansX", sans-serif; /* فرض می\u200cکنیم این فونت از طریق style.css یا به صورت مستقیم ایمپورت شده */
-        color: #333;
-        direction: rtl; /* اطمینان از جهت\u200cدهی RTL */
-      }
-      .navbar-brand img {
-        max-height: 80px; /* اندازه لوگو */
-      }
-      .hero-section {
-        position: relative;
-        height: 80vh; /* ارتفاع بخش قهرمان */
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-      }
-      .hero-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-        transform: translate(-50%, -50%);
-        background-size: cover;
-      }
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6); /* لایه تیره روی ویدئو */
-        z-index: 0;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 1;
-        padding: 20px;
-      }
-      .section-title {
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: bold;
-        color: #1a73e8; /* رنگ اصلی شرکت */
-      }
-      .card {
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease-in-out;
-        border: none; /* حذف بوردر پیش فرض بوت\u200cاسترپ */
-      }
-      .card:hover {
-        transform: translateY(-5px);
-      }
-      .card-img-top {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        height: 200px; /* ارتفاع ثابت برای تصاویر کارت ها */
-        object-fit: cover; /* حفظ نسبت تصویر */
-      }
-      .footer {
-        background-color: #f8f9fa; /* رنگ خاکستری روشن برای فوتر */
-        color: #333;
-        padding: 40px 0;
-        border-top: 1px solid #eee;
-      }
-      .social-icons a {
-        color: #1a73e8;
-        font-size: 24px;
-        margin: 0 10px;
-        transition: color 0.2s;
-      }
-      .social-icons a:hover {
-        color: #0d47a1;
-      }
-    </style>
   </head>
   <body>
     <header>{% include "navbar.html" %}</header>
 
-    {% block content %} {% endblock content %}
-    {%include 'footer.html' %}
+    {% block content %} {% endblock content %} {%include 'footer.html' %}
 
     <script src="{% static 'compiled_assets/js/main.js' %}"></script>
     <script src="{% static 'compiled_assets/js/custom.js' %}"></script>
